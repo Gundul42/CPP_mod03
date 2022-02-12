@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/12 17:58:25 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/12 18:28:43 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,33 @@
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	std::cout << "ScavTrap default constructor called" << std::endl;
+	this->_hitpts = 120;
+	this->_energypts = 50;
+	this->_attckdmg = 20;
+	std::cout << _hitpts << ", " << _energypts << ", ";
+	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 		
 ScavTrap::ScavTrap(std::string const name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap constructor called with name, " << name << std::endl;
+	this->_hitpts = 120;
+	this->_energypts = 50;
+	this->_attckdmg = 20;
+	std::cout << _hitpts << ", " << _energypts << ", ";
+	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &cpy) : ClapTrap(cpy)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
+	this->_hitpts = 120;
+	this->_energypts = 50;
+	this->_attckdmg = 20;
+	std::cout << _hitpts << ", " << _energypts << ", ";
+	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 

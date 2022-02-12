@@ -6,23 +6,25 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/12 16:23:24 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/12 18:38:56 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 //Constructors
-ClapTrap::ClapTrap(void) : _name("Default"), _hitpts(100), _energypts(50), _attckdmg(20)
+ClapTrap::ClapTrap(void) : _name("Default"), _hitpts(10), _energypts(10), _attckdmg(0)
 {
-	std::cout << "Default contructor called, Default, 100, 50, 20" << std::endl;
+	std::cout << "ClapTrap constructor called, " << _name << ", " << _hitpts;
+	std::cout << ", " << _energypts << ", " << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 		
-ClapTrap::ClapTrap(std::string const name) : _hitpts(100), _energypts(50), _attckdmg(20)
+ClapTrap::ClapTrap(std::string const name) : _hitpts(10), _energypts(10), _attckdmg(0)
 {
 	this->_name = name;
-	std::cout << "Constructor called with name, name = " << name << std::endl;
+	std::cout << "ClapTrap constructor called, " << _name << ", " << _hitpts;
+	std::cout << ", " << _energypts << ", " << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 
@@ -64,14 +66,16 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << "ClapTrap damage " << std::endl;
 	std::cout << this->_name << " took damage of " << amount << " points" << std::endl;
-	std::cout << std::endl;
 	this->_energypts -= amount;
+	std::cout << this->_name << " has " << this->_energypts << " pts left." << std::endl;
+	std::cout << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	std::cout << "ClapTrap repaired" << std::endl;
 	std::cout << this->_name << " was repaired by " << amount << " points." << std::endl;
-	std::cout << std::endl;
 	this->_energypts += amount;
+	std::cout << this->_name << " now has " << this->_energypts << " points." << std::endl;
+	std::cout << std::endl;
 }
