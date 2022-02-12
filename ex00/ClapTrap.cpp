@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/12 15:38:37 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/12 16:13:39 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap  &ovr)
 void	ClapTrap::attack(std::string const &target)
 {
 	std::cout << "ClapTrap attacks " << std::endl;
-	std::cout << this->_name << " attacks " << target << std::endl;
+	std::cout << this->_name << " attacks " << target;
+	std::cout << " causing damage of " << this->_attckdmg << std::endl;
 	std::cout << std::endl;
 }
 
@@ -64,6 +65,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	std::cout << "ClapTrap damage " << std::endl;
 	std::cout << this->_name << " took damage of " << amount << " points" << std::endl;
 	std::cout << std::endl;
+	this->_energypts -= amount;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -71,4 +73,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "ClapTrap repaired" << std::endl;
 	std::cout << this->_name << " was repaired by " << amount << " points." << std::endl;
 	std::cout << std::endl;
+	this->_energypts += amount;
 }
