@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/12 14:02:52 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:56:26 by graja            ###   ########.fr       */
+/*   Created: 2022/02/12 12:39:09 by graja             #+#    #+#             */
+/*   Updated: 2022/02/12 17:54:01 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
 
-int main(void)
+# include "ClapTrap.hpp"
+
+class	ScavTrap : public ClapTrap
 {
-	ScavTrap	test;
-	ScavTrap	lala("LaLa");
-	ScavTrap	lolo = test;
+	public:
+		ScavTrap(void);
+		ScavTrap(std::string const name);
+		ScavTrap(const ScavTrap &cpy);
+		~ScavTrap(void);
+		
+		ScavTrap	&operator=(const ScavTrap &ovr);
 
-	test.attack("TestTrapper");
-	lala.takeDamage(10);
-	lala.beRepaired(9);
-	lolo.takeDamage(13);
-	lala.guardGate();
-	lolo.guardGate();
-	return (0);
-}
+		void	guardGate(void);
+};
+
+#endif

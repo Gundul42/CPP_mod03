@@ -1,65 +1,65 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:42:59 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/13 10:40:30 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 //This is not really needed.
 //The one and only use is to get an extra output
-//to see when ScavTrap's constructor + destructor are called
+//to see when FragTrap's constructor + destructor are called
 
 //Constructors
-ScavTrap::ScavTrap(void) : ClapTrap()
+FragTrap::FragTrap(void) : ClapTrap()
 {
-	std::cout << "ScavTrap default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called" << std::endl;
 	this->_hitpts = 100;
-	this->_energypts = 50;
-	this->_attckdmg = 20;
+	this->_energypts = 100;
+	this->_attckdmg = 30;
 	std::cout << _hitpts << ", " << _energypts << ", ";
 	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 		
-ScavTrap::ScavTrap(std::string const name) : ClapTrap(name)
+FragTrap::FragTrap(std::string const name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap constructor called with name, " << name << std::endl;
+	std::cout << "FragTrap constructor called with name, " << name << std::endl;
 	this->_hitpts = 100;
-	this->_energypts = 50;
-	this->_attckdmg = 20;
+	this->_energypts = 100;
+	this->_attckdmg = 30;
 	std::cout << _hitpts << ", " << _energypts << ", ";
 	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &cpy) : ClapTrap(cpy)
+FragTrap::FragTrap(const FragTrap &cpy) : ClapTrap(cpy)
 {
-	std::cout << "ScavTrap copy constructor called" << std::endl;
+	std::cout << "FragTrap copy constructor called" << std::endl;
 	this->_hitpts = 100;
-	this->_energypts = 50;
-	this->_attckdmg = 20;
+	this->_energypts = 100;
+	this->_attckdmg = 30;
 	std::cout << _hitpts << ", " << _energypts << ", ";
 	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
 }
 
 //Destructor
-ScavTrap::~ScavTrap(void)
+FragTrap::~FragTrap(void)
 {
-	std::cout << "ScavTrap destructor called" << std::endl;
+	std::cout << "FragTrap destructor called" << std::endl;
 	std::cout << this->_name << " says good bye" << std::endl;
 	std::cout << std::endl;
 }
 
 //Operator overload for '='
-ScavTrap&	ScavTrap::operator=(const ScavTrap  &ovr)
+FragTrap&	FragTrap::operator=(const FragTrap  &ovr)
 {
 	this->_name = ovr._name;
 	this->_hitpts = ovr._hitpts;
@@ -68,10 +68,11 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap  &ovr)
 	return (*this);
 }
 
+// Only this is really needed, because unique for a FragTrap !
 //Member functions
-void	ScavTrap::guardGate(void)
+void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "ScavTrap Gate keeper mode" << std::endl;
-	std::cout << this->_name << " entered gate keeper mode!" << std::endl;
+	std::cout << "FragTrap HighFivesGuys" << std::endl;
+	std::cout << this->_name << " requests for a HighFive!" << std::endl;
 	std::cout << std::endl;
 }

@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/12 14:02:52 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:56:26 by graja            ###   ########.fr       */
+/*   Created: 2022/02/12 12:39:09 by graja             #+#    #+#             */
+/*   Updated: 2022/02/13 10:50:56 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_H
+# define FRAGTRAP_H
 
-int main(void)
+# include "ClapTrap.hpp"
+
+class	FragTrap : public ClapTrap
 {
-	ScavTrap	test;
-	ScavTrap	lala("LaLa");
-	ScavTrap	lolo = test;
+	public:
+		FragTrap(void);
+		FragTrap(std::string const name);
+		FragTrap(const FragTrap &cpy);
+		~FragTrap(void);
+		
+		FragTrap	&operator=(const FragTrap &ovr);
 
-	test.attack("TestTrapper");
-	lala.takeDamage(10);
-	lala.beRepaired(9);
-	lolo.takeDamage(13);
-	lala.guardGate();
-	lolo.guardGate();
-	return (0);
-}
+		void	highFivesGuys(void);
+};
+
+#endif
