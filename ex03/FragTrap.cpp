@@ -6,15 +6,11 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:40:30 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 13:52:35 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-
-//This is not really needed.
-//The one and only use is to get an extra output
-//to see when FragTrap's constructor + destructor are called
 
 //Constructors
 FragTrap::FragTrap(void) : ClapTrap()
@@ -75,4 +71,18 @@ void	FragTrap::highFivesGuys(void)
 	std::cout << "FragTrap HighFivesGuys" << std::endl;
 	std::cout << this->_name << " requests for a HighFive!" << std::endl;
 	std::cout << std::endl;
+}
+
+//protected functions for use in inherited childclasses
+
+void	FragTrap::setHitPoints(void)
+{
+	std::cout << "FragTrap set hitpoints to a FragTrap default of 100" << std::endl;
+	this->_hitpts = 100;
+}
+
+void	FragTrap::setAttackDamage(void)
+{
+	std::cout << "FragTrap set attckdmg to a FragTrap default of 30" << std::endl;
+	this->_attckdmg = 30;
 }

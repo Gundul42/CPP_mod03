@@ -6,24 +6,21 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 14:02:52 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:53:59 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 17:17:32 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-	FragTrap	test;
-	FragTrap	lala("LaLa");
-	FragTrap	lolo = test;
+	DiamondTrap	test;
+	DiamondTrap	lala("LaLa");
+	DiamondTrap	kuemmel(test);
 
+	lala.attack("LOLO");
 	test.attack("TestTrapper");
-	lala.takeDamage(10);
-	lala.beRepaired(9);
-	lolo.takeDamage(13);
-	lala.highFivesGuys();
-	lolo.highFivesGuys();
+	test.guardGate();
+	test.highFivesGuys();
 	return (0);
 }

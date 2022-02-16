@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:45:01 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 15:22:46 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,16 @@ void	ScavTrap::guardGate(void)
 	std::cout << "ScavTrap Gate keeper mode" << std::endl;
 	std::cout << this->_name << " entered gate keeper mode!" << std::endl;
 	std::cout << std::endl;
+}
+		
+void	ScavTrap::setEnergyPoints(void)
+{
+	this->_energypts = 50;
+	std::cout << "ScavTrap sets energy points to ScavTrap default of 50" << std::endl;
+}
+
+void	ScavTrap::attack(std::string const &target)
+{
+	std::cout << "ScavTrap calling ClapTrap::attack" << std::endl;
+	this->ClapTrap::attack(target);
 }

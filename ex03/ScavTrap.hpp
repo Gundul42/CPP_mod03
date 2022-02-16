@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 12:39:09 by graja             #+#    #+#             */
-/*   Updated: 2022/02/12 17:54:01 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 17:13:46 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
+	protected:
+		void	setEnergyPoints(void);
+
 	public:
 		ScavTrap(void);
 		ScavTrap(std::string const name);
@@ -26,6 +29,7 @@ class	ScavTrap : public ClapTrap
 		ScavTrap	&operator=(const ScavTrap &ovr);
 
 		void	guardGate(void);
+		void	attack(std::string const &target);
 };
 
 #endif

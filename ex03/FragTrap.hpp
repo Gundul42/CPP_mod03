@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 12:39:09 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:50:56 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 13:52:52 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class	FragTrap : public ClapTrap
+class	FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap(void);
@@ -26,6 +26,10 @@ class	FragTrap : public ClapTrap
 		FragTrap	&operator=(const FragTrap &ovr);
 
 		void	highFivesGuys(void);
+
+	protected:
+		void	setHitPoints(void);
+		void	setAttackDamage(void);
 };
 
 #endif
