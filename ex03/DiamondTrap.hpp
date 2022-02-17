@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 12:39:09 by graja             #+#    #+#             */
-/*   Updated: 2022/02/16 15:44:17 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 18:36:43 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class	DiamondTrap : public ScavTrap, public FragTrap
 		
 //		DiamondTrap	&operator=(const DiamondTrap &ovr);
 		void	attack(std::string const &target);
+		void	whoAmI(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/16 16:03:43 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/16 18:40:17 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,11 @@ DiamondTrap::~DiamondTrap(void)
 void	DiamondTrap::attack(std::string const &target)
 {
 	this->ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI(void)
+{
+	std::cout << "DiamondTrap name is: " << this->_name << std::endl;
+	std::cout << "It's ClapTrap name is: " << this->ClapTrap::_name << std::endl;
+	std::cout << std::endl;
 }
