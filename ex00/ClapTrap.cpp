@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/12 16:13:39 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/17 11:07:14 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ ClapTrap::~ClapTrap(void)
 //Operator overload for '='
 ClapTrap&	ClapTrap::operator=(const ClapTrap  &ovr)
 {
+	std::cout << "ClapTrap Operator Overload '='" << std::endl;
+	std::cout << this->_name << " = " << ovr._name << std::endl;
+	std::cout << std::endl;
 	this->_name = ovr._name;
 	this->_hitpts = ovr._hitpts;
 	this->_energypts = ovr._energypts;

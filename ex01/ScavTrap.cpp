@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/17 10:13:33 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/17 11:17:59 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ ScavTrap::ScavTrap(std::string const name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &cpy) : ClapTrap(cpy)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	this->_hitpts = 100;
-	this->_energypts = 50;
-	this->_attckdmg = 20;
+	*this = cpy;
 	std::cout << _hitpts << ", " << _energypts << ", ";
 	std::cout << _attckdmg << std::endl;
 	std::cout << std::endl;
