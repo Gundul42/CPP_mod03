@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/16 13:52:35 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/17 09:46:38 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ FragTrap&	FragTrap::operator=(const FragTrap  &ovr)
 	return (*this);
 }
 
-// Only this is really needed, because unique for a FragTrap !
 //Member functions
 void	FragTrap::highFivesGuys(void)
 {

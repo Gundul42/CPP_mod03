@@ -6,15 +6,11 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:40:30 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/17 10:10:49 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-
-//This is not really needed.
-//The one and only use is to get an extra output
-//to see when FragTrap's constructor + destructor are called
 
 //Constructors
 FragTrap::FragTrap(void) : ClapTrap()
@@ -68,7 +64,6 @@ FragTrap&	FragTrap::operator=(const FragTrap  &ovr)
 	return (*this);
 }
 
-// Only this is really needed, because unique for a FragTrap !
 //Member functions
 void	FragTrap::highFivesGuys(void)
 {

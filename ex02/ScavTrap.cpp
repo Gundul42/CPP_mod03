@@ -6,15 +6,11 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/13 10:45:01 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/17 10:11:26 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
-//This is not really needed.
-//The one and only use is to get an extra output
-//to see when ScavTrap's constructor + destructor are called
 
 //Constructors
 ScavTrap::ScavTrap(void) : ClapTrap()

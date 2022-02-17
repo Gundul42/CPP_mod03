@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 13:31:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/16 18:40:17 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/17 10:00:13 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,15 @@ DiamondTrap::~DiamondTrap(void)
 }
 
 //Operator overload for '='
-/*DiamondTrap&	DiamondTrap::operator=(const DiamondTrap  &ovr)
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap  &ovr)
 {
+	this->ClapTrap::_name = ovr.ClapTrap::_name;
 	this->_name = ovr._name;
 	this->_hitpts = ovr._hitpts;
 	this->_energypts = ovr._energypts;
 	this->_attckdmg = ovr._attckdmg;
 	return (*this);
-}*/
+}
 
 //Member functions
 void	DiamondTrap::attack(std::string const &target)
